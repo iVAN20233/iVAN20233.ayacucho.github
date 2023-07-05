@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QUISPE MAMANI IVAN AMIER</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/map.css">
     <style>
         #map {
-            height: 500px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100vh; /* Utiliza el 100% de la altura visible del viewport */
         }
 
         #legend {
@@ -19,6 +25,9 @@
             font-size: 20px;
             font-weight: bold;
             z-index: 100;
+            /* Agrega las siguientes propiedades para posicionarlo a la izquierda */
+            right: auto;
+            text-align: left;
         }
     </style>
 </head>
@@ -27,17 +36,7 @@
     <div id="legend">DEPARTAMENTO DE AYACUCHO - PERÚ</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
-    <script>
-        // Código JavaScript para inicializar el mapa y agregar capas, marcadores, etc.
-        var map = L.map('map').setView([latitude, longitude], zoom);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-            maxZoom: 18
-        }).addTo(map);
-
-        // Aquí puedes agregar más capas, marcadores, polígonos, etc.
-
-    </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="assets/js/map.js"></script>
 </body>
 </html>
